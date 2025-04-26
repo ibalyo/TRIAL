@@ -4,11 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kursus Online Bahasa Jepang</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Inline Sederhana - Anda sebaiknya menyimpan CSS di file style.css terpisah untuk proyek yang lebih besar */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #hero {
+            background-color: #e0f7fa;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            /* Contoh background image */
+            background-image: url('images/banner-jepang.png'); /* Ganti dengan path gambar Anda */
+            background-size: cover;
+            background-position: center;
+            color: #333; /* Sesuaikan warna teks jika perlu */
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Latar belakang semi-transparan untuk teks */
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .materi-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .materi-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            /* Contoh penggunaan ikon */
+            background-image: url('images/ikon-buku.png'); /* Ganti dengan path ikon Anda */
+            background-repeat: no-repeat;
+            background-position: top right 10px;
+            background-size: 30px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Contoh logo */
+        header h1::before {
+            content: url('images/logo-jepang.png'); /* Ganti dengan path logo Anda */
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Kursus Online Bahasa Jepang!</h1>
+        <h1>Kursus Online Bahasa Jepang</h1>
         <nav>
             <ul>
                 <li><a href="#tentang">Tentang Kursus</a></li>
@@ -32,10 +154,10 @@
             <h2>Tentang Kursus</h2>
             <p>Kursus online bahasa Jepang ini menyediakan materi pembelajaran yang komprehensif dan interaktif. Anda akan belajar tata bahasa, kosakata, percakapan sehari-hari, dan budaya Jepang. Instruktur kami adalah para ahli bahasa Jepang yang berpengalaman dan siap membimbing Anda.</p>
             <ul>
-                <li>Pembelajaran fleksibel, bisa diakses kapan saja dan di mana saja.</li>
-                <li>Materi terstruktur dan mudah dipahami.</li>
-                <li>Latihan interaktif untuk meningkatkan kemampuan berbahasa.</li>
-                <li>Komunitas belajar yang suportif.</li>
+                <li>Pembelajaran fleksibel, bisa diakses kapan saja dan di mana saja. <img src="images/ikon-fleksibel.png" alt="Ikon Fleksibel" style="width: 20px; vertical-align: middle; margin-left: 5px;"></li>
+                <li>Materi terstruktur dan mudah dipahami. <img src="images/ikon-struktur.png" alt="Ikon Struktur" style="width: 20px; vertical-align: middle; margin-left: 5px;"></li>
+                <li>Latihan interaktif untuk meningkatkan kemampuan berbahasa. <img src="images/ikon-interaktif.png" alt="Ikon Interaktif" style="width: 20px; vertical-align: middle; margin-left: 5px;"></li>
+                <li>Komunitas belajar yang suportif. <img src="images/ikon-komunitas.png" alt="Ikon Komunitas" style="width: 20px; vertical-align: middle; margin-left: 5px;"></li>
             </ul>
         </section>
 
@@ -43,15 +165,15 @@
             <h2>Materi Kursus</h2>
             <div class="materi-list">
                 <div class="materi-item">
-                    <h3>Level Pemula</h3>
+                    <h3>Level Pemula <img src="images/ikon-pemula.png" alt="Ikon Pemula" style="width: 25px; vertical-align: middle; margin-left: 5px;"></h3>
                     <p>Mempelajari dasar-dasar huruf Hiragana dan Katakana, salam perkenalan, angka, dan frasa umum.</p>
                 </div>
                 <div class="materi-item">
-                    <h3>Level Menengah</h3>
+                    <h3>Level Menengah <img src="images/ikon-menengah.png" alt="Ikon Menengah" style="width: 25px; vertical-align: middle; margin-left: 5px;"></h3>
                     <p>Mendalami tata bahasa dasar, Kanji sederhana, percakapan sehari-hari yang lebih kompleks, dan pemahaman budaya.</p>
                 </div>
                 <div class="materi-item">
-                    <h3>Level Lanjut</h3>
+                    <h3>Level Lanjut <img src="images/ikon-lanjut.png" alt="Ikon Lanjut" style="width: 25px; vertical-align: middle; margin-left: 5px;"></h3>
                     <p>Menguasai tata bahasa tingkat lanjut, Kanji yang lebih kompleks, diskusi topik mendalam, dan persiapan ujian kemampuan bahasa Jepang (JLPT).</p>
                 </div>
             </div>
@@ -82,16 +204,29 @@
             <h2>Kontak Kami</h2>
             <p>Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami melalui:</p>
             <ul>
-                <li>Email: info@jepangonline.com</li>
-                <li>Telepon: +62 812 3456 7890</li>
+                <li>Email: <a href="mailto:info@jepangonline.com">info@jepangonline.com</a> <img src="images/ikon-email.png" alt="Ikon Email" style="width: 20px; vertical-align: middle; margin-left: 5px;"></li>
+                <li>Telepon: +62 812 3456 7890 <img src="images/ikon-telepon.png" alt="Ikon Telepon" style="width: 20px; vertical-align: middle; margin-left: 5px;"></li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Kursus Online Bahasa Jepang</p>
+        <p>&copy; 2025 Kursus Online Bahasa Jepang <img src="images/logo-kecil.png" alt="Logo Kecil" style="width: 20px; vertical-align: middle; margin-left: 5px;"></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Contoh JavaScript sederhana (bisa ditempatkan di file script.js terpisah)
+        document.addEventListener('DOMContentLoaded', function() {
+            const formPendaftaran = document.querySelector('#pendaftaran form');
+            if (formPendaftaran) {
+                formPendaftaran.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    alert('Terima kasih telah mendaftar! Kami akan segera menghubungi Anda.');
+                    formPendaftaran.reset();
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
